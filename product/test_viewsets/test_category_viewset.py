@@ -1,0 +1,19 @@
+from rest_framework import status
+from rest_framework.response import Response
+from rest_framework.viewsets import ModelViewSet
+
+from product.models import Category
+from product.serializers import CategorySerializer
+
+
+class CategoryViewSet(ModelViewSet):
+    serializer_class = CategorySerializer
+
+    def get_queryset(self):
+        return Category.objects.all().order_by("id")
+
+    # Sobrescrevendo o método list() para retornar um dicionário em vez de uma lista
+    def list(self, request, *args, **kwargs):
+        queryset = self.filter_queryset(self.get_queryset())
+        serializer = self.get_serializer(queryset, many=True)
+        return Response({"results": serializer.data})  # Retornando um dicionário com chave 'results'
