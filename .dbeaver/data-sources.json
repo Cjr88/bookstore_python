@@ -1,0 +1,35 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-18e39854ee2-2601b5379d26fdd6": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "bookstore_python_dev_db",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "5432",
+				"database": "bookstore_python_dev_db",
+				"url": "jdbc:postgresql://localhost:5432/bookstore_python_dev_db",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"provider-properties": {},
+				"auth-model": "native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": false,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800
+		}
+	}
+}

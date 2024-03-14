@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "builds": [
+    {
+        "src": "bookstore_python/wsgi.py",
+        "use": "@vercel/python"
+    }
+    ],
+    "routes": [
+    {
+        "src": "/(.*)",
+        "dest": "bookstore_python/wsgi.py"
+    }
+    ],
+    "env": {
+    "DJANGO_SETTINGS_MODULE": "bookstore_python.settings"
+    }
+}
