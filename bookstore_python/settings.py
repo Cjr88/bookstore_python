@@ -1,6 +1,7 @@
 import logging
 import os
 from pathlib import Path
+import logging
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -16,7 +17,6 @@ SECRET_KEY = "django-insecure-f*k@=53bc5!shef1-6w+m$-g)kspbaljz%8k4(j7iuc-u2_dyd
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -144,8 +144,6 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-
-
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -159,4 +157,3 @@ LOGGING = {
         'level': 'WARNING',
     }
 }
-
